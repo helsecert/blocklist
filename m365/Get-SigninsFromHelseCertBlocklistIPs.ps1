@@ -17,15 +17,15 @@
     Brukeren som kjører scriptet må ha skrivetilganger til dei tre lokale filene
 
 .NOTES
-    Version:        0.4
+    Version:        0.5
     Author:         SysIKT KO
-    Updated date:  2024-03-08
+    Updated date:  2024-03-11
 
     Denne versjonen av scriptet er tilpassa for å kunne brukes av medlemmer av Nasjonalt beskyttelsesprogram (NBP), 
     men har blitt utvikla for å passe inn i SysIKT KO sitt driftsmiljø, og ein må rekne med å måtte gjere lokale tilpassingar.
     Helse- og KommuneCERT mottar gjerne oppdaterte versjoner av scriptet frå andre medlemmer som vil bidra til å forbedre det.
 
-    Variablane i fila config.txt må endrast før kjøring av scriptet! Fila er referert på linje 49.
+    Variablane i fila config.txt må endrast før kjøring av scriptet! Fila er referert på linje 62.
     Det anbefales å kjøre scriptet manuelt første gang for å sjekke at det fungerer som forventa.
 
     Scriptet krever Powershell versjon 7 eller nyare, samt tilhørande Microsoft.Graph modular.
@@ -69,17 +69,20 @@ $configfil = "C:\Scripts\_Task scheduler\config.txt"
 # Henter inn configdata fra filen config.txt
 Get-Content $configfil | ForEach-Object { 
   $key, $val = $_ -split '='
-  if ($key -eq 'TenantId') { $TenantId=$val } 
-  elseif ($key -eq 'AppId') { $AppId=$val } 
-  elseif ($key -eq 'CertificateThumbprint') { $CertificateThumbprint=$val } 
-  elseif ($key -eq 'NBPuser') { $NBPuser=$val }
-  elseif ($key -eq 'NBPpass') { $NBPpass=$val } 
-  elseif ($key -eq 'smtpserver') { $smtpserver=$val }
-  elseif ($key -eq 'smtpto') { $smtpto=$val }
-  elseif ($key -eq 'smtpfrom') { $smtpfrom=$val }
-  elseif ($key -eq 'NamedLocations') { $NamedLocations=$val }
-  elseif ($key -eq 'Signinslog') { $Signinslog=$val }
-  elseif ($key -eq 'blocklistdomain') { $blocklistdomain=$val }
+  if($val -ne $null) {
+      $key = $key.Trim()
+      $val = $val.Trim()
+      if ($key -eq 'TenantId') { $TenantId=$val } 
+      elseif ($key -eq 'AppId') { $AppId=$val } 
+      elseif ($key -eq 'CertificateThumbprint') { $CertificateThumbprint=$val } 
+      elseif ($key -eq 'NBPuser') { $NBPuser=$val }
+      elseif ($key -eq 'NBPpass') { $NBPpass=$val } 
+      elseif ($key -eq 'smtpserver') { $smtpserver=$val }
+      elseif ($key -eq 'smtpto') { $smtpto=$val }
+      elseif ($key -eq 'smtpfrom') { $smtpfrom=$val }
+      elseif ($key -eq 'NamedLocations') { $NamedLocations=$val }
+      elseif ($key -eq 'Signinslog') { $Signinslog=$val }
+      elseif ($key -eq 'blocklistdomain') { $blocklistdomain=$val }
 }
 
 # Sjekker om variabler er endret før kjøring
