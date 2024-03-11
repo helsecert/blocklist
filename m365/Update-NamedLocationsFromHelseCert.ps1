@@ -9,13 +9,14 @@
     
     Scriptet er laga for å kjøres som oppgave i Windows Task Scheduler
     Scriptet krever ein app registrert i Azure AD med følgende API tilganger:
-    - DeviceManagementServiceConfig.ReadWrite.All
+    - Policy.Read.All
+    - Policy.ReadWrite.ConditionalAccess
     Scriptet krever ein SMTP server for å sende epost
 
 .NOTES
-    Version:        0.3
+    Version:        0.4
     Author:         SysIKT KO
-    Updated date:  2024-03-08
+    Updated date:  2024-03-11
 
     Takk til Alexander Filipin for utgangspunktet til scriptet:
     https://github.com/AlexFilipin/ConditionalAccess/blob/master/Deploy-NamedLocations.ps1
@@ -29,7 +30,7 @@
     men har blitt utvikla for å passe inn i SysIKT KO sitt driftsmiljø, og ein må rekne med å måtte gjere lokale tilpassingar.
     Helse- og KommuneCERT mottar gjerne oppdaterte versjoner av scriptet frå andre medlemmer som vil bidra til å forbedre det.
 
-    Variablane må settes i fila config.txt før kjøring av scriptet. Denne er referert til i linje 49 i koden.
+    Variablane må settes i fila config.txt før kjøring av scriptet. Denne er referert til i linje 64 i koden.
     Det anbefales å kjøre scriptet manuelt første gang for å sjekke at det fungerer som forventa.
 
     Potensielle forbedringer:
@@ -70,17 +71,20 @@ $configfil = "C:\Scripts\_Task scheduler\config.txt"
 
 Get-Content $configfil | ForEach-Object { 
   $key, $val = $_ -split '='
-  if ($key -eq 'TenantId') { $TenantId=$val } 
-  elseif ($key -eq 'AppId') { $AppId=$val } 
-  elseif ($key -eq 'CertificateThumbprint') { $CertificateThumbprint=$val } 
-  elseif ($key -eq 'NBPuser') { $NBPuser=$val }
-  elseif ($key -eq 'NBPpass') { $NBPpass=$val } 
-  elseif ($key -eq 'smtpserver') { $smtpserver=$val }
-  elseif ($key -eq 'smtpto') { $smtpto=$val }
-  elseif ($key -eq 'smtpfrom') { $smtpfrom=$val }
-  elseif ($key -eq 'NamedLocations') { $NamedLocations=$val }
-  elseif ($key -eq 'blocklistdomain') { $blocklistdomain=$val }
-  elseif ($key -eq 'NamedLocationId') { $NamedLocationId=$val }
+  if($val -ne $null) {
+    $key = $key.Trim()
+    $val = $val.Trim()
+    if ($key -eq 'TenantId') { $TenantId=$val } 
+    elseif ($key -eq 'AppId') { $AppId=$val } 
+    elseif ($key -eq 'CertificateThumbprint') { $CertificateThumbprint=$val } 
+    elseif ($key -eq 'NBPuser') { $NBPuser=$val }
+    elseif ($key -eq 'NBPpass') { $NBPpass=$val } 
+    elseif ($key -eq 'smtpserver') { $smtpserver=$val }
+    elseif ($key -eq 'smtpto') { $smtpto=$val }
+    elseif ($key -eq 'smtpfrom') { $smtpfrom=$val }
+    elseif ($key -eq 'NamedLocations') { $NamedLocations=$val }
+    elseif ($key -eq 'blocklistdomain') { $blocklistdomain=$val }
+    elseif ($key -eq 'NamedLocationId') { $NamedLocationId=$val }
 
 }
 
@@ -149,7 +153,7 @@ if ((Test-Path $NamedLocations) -and (Get-Content $NamedLocations | Measure-Obje
     
     # Oppdater Named Location
     write-host "Oppdaterer Named Locations" -ForegroundColor Green
-    Update-MgBetaIdentityConditionalAccessNamedLocation -NamedLocationId $NamedLocationId -BodyParameter $params
+    Update-MgIdentityConditionalAccessNamedLocation -NamedLocationId $NamedLocationId -BodyParameter $params
 } 
 
 else {
