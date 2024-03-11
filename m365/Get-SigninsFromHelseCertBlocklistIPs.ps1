@@ -72,17 +72,17 @@ Get-Content $configfil | ForEach-Object {
   if($val -ne $null) {
       $key = $key.Trim()
       $val = $val.Trim()
-      if ($key -eq 'TenantId') { $TenantId=$val } 
-      elseif ($key -eq 'AppId') { $AppId=$val } 
-      elseif ($key -eq 'CertificateThumbprint') { $CertificateThumbprint=$val } 
-      elseif ($key -eq 'NBPuser') { $NBPuser=$val }
-      elseif ($key -eq 'NBPpass') { $NBPpass=$val } 
-      elseif ($key -eq 'smtpserver') { $smtpserver=$val }
-      elseif ($key -eq 'smtpto') { $smtpto=$val }
-      elseif ($key -eq 'smtpfrom') { $smtpfrom=$val }
-      elseif ($key -eq 'NamedLocations') { $NamedLocations=$val }
-      elseif ($key -eq 'Signinslog') { $Signinslog=$val }
-      elseif ($key -eq 'blocklistdomain') { $blocklistdomain=$val }
+      if ($key -eq '$TenantId') { $TenantId=$val } 
+      elseif ($key -eq '$AppId') { $AppId=$val } 
+      elseif ($key -eq '$CertificateThumbprint') { $CertificateThumbprint=$val } 
+      elseif ($key -eq '$NBPuser') { $NBPuser=$val }
+      elseif ($key -eq '$NBPpass') { $NBPpass=$val } 
+      elseif ($key -eq '$smtpserver') { $smtpserver=$val }
+      elseif ($key -eq '$smtpto') { $smtpto=$val }
+      elseif ($key -eq '$smtpfrom') { $smtpfrom=$val }
+      elseif ($key -eq '$NamedLocations') { $NamedLocations=$val }
+      elseif ($key -eq '$Signinslog') { $Signinslog=$val }
+      elseif ($key -eq '$blocklistdomain') { $blocklistdomain=$val }
 }
 
 # Sjekker om variabler er endret før kjøring
