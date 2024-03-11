@@ -83,6 +83,7 @@ Get-Content $configfil | ForEach-Object {
       elseif ($key -eq '$NamedLocations') { $NamedLocations=$val }
       elseif ($key -eq '$Signinslog') { $Signinslog=$val }
       elseif ($key -eq '$blocklistdomain') { $blocklistdomain=$val }
+  }
 }
 
 # Sjekker om variabler er endret før kjøring
