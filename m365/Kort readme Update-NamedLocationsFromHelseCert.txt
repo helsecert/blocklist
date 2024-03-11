@@ -8,7 +8,8 @@ Sender epost hvis egne public ip-adresser er inkludert i blocklista
 
 Scriptet er laga for å kjøres som oppgave i Windows Task Scheduler
 Scriptet krever ein app registrert i Azure AD med følgende API tilganger:
- - DeviceManagementServiceConfig.ReadWrite.All
+ - Policy.Read.All
+ - Policy.ReadWrite.ConditionalAccess
 Scriptet krever ein SMTP server for å sende epost
 
 NB! NB!
