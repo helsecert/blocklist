@@ -1,4 +1,6 @@
-﻿<#    
+﻿#Requires -Version 7.0
+
+<#    
 .SYNOPSIS
     Script for automatisk søke gjennom sign-in logs etter IPer frå blocklista til Helse- og KommuneCERT
 
@@ -134,7 +136,8 @@ if ((Test-Path $NamedLocations) -and (Get-Content $NamedLocations | Measure-Obje
         $ip = $($_.cidrAddress)
         Import-Module Microsoft.Graph.Beta.Reports
         Connect-MgGraph -TenantId $using:TenantId -AppId $using:AppId -CertificateThumbprint $using:CertificateThumbprint -ErrorAction Stop -NoWelcome
-        $Signins  = Get-MgAuditLogSignIn -Filter "startsWith(ipAddress,'$ip')" -All | Select-Object Id, UserPrincipalName, CreatedDateTime, IPAddress
+        #$Signins  = Get-MgAuditLogSignIn -Filter "startsWith(ipAddress,'$ip')" -All | Select-Object Id, UserPrincipalName, CreatedDateTime, IPAddress
+        $Signins  = Get-MgBetaAuditLogSignIn -Filter "startsWith(ipAddress,'$ip')" -All | Select-Object Id, UserPrincipalName, CreatedDateTime, IPAddress
          
         if (!($signins)){
             write-host "Ingen signins fra:" $ip -ForegroundColor Green
