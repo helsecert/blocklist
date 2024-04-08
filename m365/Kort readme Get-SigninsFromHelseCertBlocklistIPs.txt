@@ -14,6 +14,8 @@ Scriptet gjer følgande:
     Scriptet krever ein SMTP server for å sende epost
     Brukeren som kjører scriptet må ha skrivetilganger til dei to lokale filene
 
+Scriptet anbefales kjørt en gang i døgnet, gjerne på morgenen. Dette med bakgrunn i at det kan ta en stund å kjøres scriptet (ca 50 min). Det er dog ingenting i veien for å kjøre dette 2-3 ganger i løpet av dagen om man ikke møter på trøbbel med throttling i azure.
+
 Ein må forandre verdiane i variablane i fila config.txt for at scriptet skal fungere som tenkt. Fila er referert i linje 49 i scriptet.
 Scriptet fungerer kun i Powershell 7 eller nyere.
 
