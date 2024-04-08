@@ -12,6 +12,8 @@ Scriptet krever ein app registrert i Azure AD med følgende API tilganger:
  - Policy.ReadWrite.ConditionalAccess
 Scriptet krever ein SMTP server for å sende epost
 
+Scriptet anbefales kjørt en gang i timen.
+
 NB! NB!
 
 Om ein er ukjent med Conditional Access (CA), så lag først ein break-glas konto så ein ikkje stenger seg sjølv ute frå tenanten ved ein feil!
