@@ -1,0 +1,11 @@
+Oppskrift på hvordan man kan hente ned og blokkere IOC'er fra blokklist i Fortigate brannmurer.
+
+Fortigate kan importere eksterne threat feeds, dette gjøres via fanen Security Fabric --> External Connectors.
+
+Create new --> IP Address
+
+For ned henting av dette kan man bruke IP-cidr filter fra link: https://data.helsecert.no/blocklist/v2?f=list_cidr
+
+Så kan man også lage en blokkerings kategori for domener med filter fra link: https://data.helsecert.no/blocklist/v2?t=domain
+
+Da kan man blokkere denne kategorien ved hjelp av et web filter.
