@@ -4,8 +4,31 @@ Fortigate kan importere eksterne threat feeds, dette gjøres via fanen Security 
 
 Create new --> IP Address
 
-For ned henting av dette kan man bruke IP-cidr filter fra link: https://data.helsecert.no/blocklist/v2?f=list_cidr
+Status: Enabled.
+Name: settes til noe lett gjenkjennelig.
+Update method: Extarnal Feed.
+URl of external resources: her brukes IP-cidr filter fra link: https://data.helsecert.no/blocklist/v2?f=list_cidr
+HTTP basic authentication: her brukes blokklist brukernavn og passord.
+Refresh rate: 5
 
-Så kan man også lage en blokkerings kategori for domener med filter fra link: https://data.helsecert.no/blocklist/v2?t=domain
+Så er det og sette en deny policy for addressene det gjelder som blokkerer både utgående og inkommende trafikk fra disse.
+
+-----------------------------------
+
+Så kan man også lage en blokkerings kategori for domener. 
+
+Status: Enabled.
+Name: settes til noe lett gjenkjennelig. (eksempelvis HelseCERT domain block)
+Update method : External Feed
+URl of external resources: https://data.helsecert.no/blocklist/v2?t=domain
+HTTP basic authentication: her brukes blokklist brukernavn og passord.
+Refresh rate: 5
 
 Da kan man blokkere denne kategorien ved hjelp av et web filter.
+Security Profiles --> Web Filter.
+
+Name : settes til noe lett gjenkjennelig
+Feature set : Flow-based
+
+Så trykker man inn på Fortiguard Category Based Filter. 
+Der skal man finne blokkerings kategorien med navn som ble laget i steget over, og såa
