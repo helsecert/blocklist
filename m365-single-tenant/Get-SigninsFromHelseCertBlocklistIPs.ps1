@@ -27,12 +27,23 @@
     men har blitt utvikla for å passe inn i SysIKT KO sitt driftsmiljø, og ein må rekne med å måtte gjere lokale tilpassingar.
     Helse- og KommuneCERT mottar gjerne oppdaterte versjoner av scriptet frå andre medlemmer som vil bidra til å forbedre det.
 
-    Variablane i fila config.txt må endrast før kjøring av scriptet! Fila er referert på linje 62.
+    Variablane i fila config.txt må endrast før kjøring av scriptet! Fila er referert på linje 75.
     Det anbefales å kjøre scriptet manuelt første gang for å sjekke at det fungerer som forventa.
+    Scriptet anbefales kjørt en gang i døgnet, gjerne på morgenen. Dette med bakgrunn i at det kan ta en stund å kjøres scriptet (ca 50 min). Det er dog ingenting i veien for å kjøre dette 2-3 ganger i løpet av dagen om man ikke møter på trøbbel med throttling i azure.
 
     Scriptet krever Powershell versjon 7 eller nyare, samt tilhørande Microsoft.Graph modular.
     I tillegg lyt ein ha høvande lisensar hos Microsoft for å kunne bruke Microsoft Graph API.
     Se: https://learn.microsoft.com/en-us/powershell/microsoftgraph/installation?view=graph-powershell-1.0
+
+    Scriptet krever at det blir oppretta ein applikasjon i Entra med riktige rettigheter, samt eit sertifikat som blir brukt til autentisering.
+    https://www.alitajran.com/connect-to-microsoft-graph-powershell/#h-method-2-how-to-connect-to-microsoft-graph-with-certificate-based-authentication-cba
+
+    Det anbefales å først kjøre scriptet manuelt for å sjekke at det fungerer slik det skal,
+    når det er gjort setter man opp ein Scheduled task på ein server:
+    https://lazyadmin.nl/powershell/how-to-create-a-powershell-scheduled-task/
+    Obs! brukaren som kjører scriptet må ha sertifikatet oppretta i førre steg i sin personlige sert-store.
+
+    Scriptet varsler via epost/SMTP, så kan være greit å sjekke at dette fungerer slik det skal før i gangsetting.
 
     Potensielle forbedringer:
     - Uthenting av signins frå Sentinel

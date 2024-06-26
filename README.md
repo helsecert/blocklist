@@ -2,21 +2,45 @@
 
 Her ligger kode som kan brukes for å integrere med Helse- og KommuneCERTs blokkeringslister for ulike produkter.
 
-Disse er i hovedsak laget av våre medlemmer og brukt i produksjonssystemer i dag. 
+Blokkeringslistene er en av tjenestene vi tilbyr til medlemmer i Nasjonalt beskyttelsesprogram. Se [helsecert.no](helsecert.no) for alle tjenester.
 
+Skriptene er i hovedsak laget av våre medlemmer og brukt i produksjonssystemer i dag. 
+
+## Bruke blokkeringslister
+
+Når man ber om tilgang til blokkeringslistene får man en intro-e-post med infor for å komme i gang. Blokkeringslistene har også et api hvor man kan spesifisere hva man vil hente ned.
+
+Blokkeringslistene har to hovedbruksområder: 
+- Blokkering av IP / domener i brannmur
+- Blokkinger og søk etter phishing-IPer i M365
+
+## Brannmurguide
+- [Fortigate](https://github.com/helsecert/blocklist/blob/master/Fortigate%20brannmur)
+
+## M365-phishing
+- For dere som vil sette det opp for [en M365-tenant](https://github.com/helsecert/blocklist/tree/master/m365-single-tenant). (Kan selvsagt gjøres for hver enkelt tenant man har)
+- For dere som vil sette det opp for flere [M365-tenants og har Sentinel-lisens](kommer...).
+
+## Hvor har dere guide for \<mitt produkt\>
+
+Vi legger ut skript / guider vi får fra medlemmer fortløpende. Finner du ikke ditt produkt her er vi takknemlige om DU kan lage en guide for det. Guider tas imot med takk på "post@helsecert.no"
+
+## Feil / mangler
 Har du/dere:
-* laget script for å mate våre blokkeringslister inn i et system vi ikke allerede har dekket? 
-* satt opp dette for et produkt som ikke er beskrevet her, og du har mulighet for å lage screenshots og evt linke til guide fra leverandør? 
+* Forbedringer til skript/beskrivelser
 
-Kontakt oss på *post@helsecert.no*, vi vil gjerne ha med ditt bidrag!
+Vi vil gjerne ha med ditt bidrag! Kontakt oss på *post@helsecert.no*.
 
-Kom i gang
---
 
-For å komme i gang med blokkeringslistene må:
-* Din virksomhet være medlem hos oss, se https://helsecert.no
-* Dere har aktivert tjenesten "blokkeringslister". Send oss en e-post til post@helsecert.no med:
- * IP-adresse(r) evt IP-nett som skal hente ned blokkeringslister - dette kan hentes ned via både internett og helsenett.
-   * IP-adresse på internett hentes enkelt ved å kjøre `curl https://api.ipify.org` i kommandolinje (cmd, powershell, unix) på maskinen/utstyret der blokkeringsliste-integrasjonen skal kjøres fra.
-   * NB! IP-adresse som skal aksessere dokumentasjon må oppgis på samme måte. Du kan også enkelt finne internett-IP-adressen ved å gå til https://api.ipify.org i nettleser.
- * Kontaktperson hos dere. E-post og telefonnummer
+## Forutsetninger
+
+
+For tilgang til blokkeringslistene må:
+* Din virksomhet være medlem hos oss. 
+  * Se https://helsecert.no -> bli medlem
+* Dere har aktivert tjenesten "blokkeringslister". 
+  * For å aktivere:  Send e-post til post@helsecert.no med:
+    * IP-adresse(r) evt IP-nett som skal teste og bruke blokkeringslister - (kan hentes ned via både internett og helsenett).
+    * Kontaktperson hos dere. E-post og telefonnummer
+ 
+IP-adresse dere kommer fra kan finnes ved å kjøre `curl https://api.ipify.org` i kommandolinje eller fra browser. (For internett)
