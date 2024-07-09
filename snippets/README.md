@@ -29,5 +29,5 @@ Denne metoden gjør det mulig å skrive sin egen tilpasset varsling hvis man f.e
 Skriptene vil generelt sett prøve prøve å bruke feilhånderings skriptet definert i funksjonen "GetEnvData" hvis det eksisterer.
 Hvis skriptet ikke er definert eller ikke finnes så hoppes det over å sende noe til feilhåndering.  
 Forventingen er at att ett eventuelt feilhånderings skript hånderer følgende:
-- Parameter: ErrorMessage, Type: string
-- Parameter: ErrorObject, Type: System.Management.Automation.ErrorRecord
+- Parameter: ErrorMessage, Type: ``string``
+- Parameter: ErrorObject, Type: ``System.Management.Automation.ErrorRecord``

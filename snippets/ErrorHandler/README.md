@@ -1,8 +1,8 @@
 # ErrorHandler
 Dette er ett enkelt eksempelskript på hvordan ErrorHandler kan implementes for skriptene her.  
 Dette skriptet sender en epost basert på parameterne det får inn.
-- Parameter: ErrorMessage, Type: string
-- Parameter: ErrorObject, Type: System.Management.Automation.ErrorRecord
+- Parameter: ErrorMessage, Type: ``string``
+- Parameter: ErrorObject, Type: ``System.Management.Automation.ErrorRecord``
 
 ## Komme i gang
 Kopier ``.env.sample`` til ``.env`` og ``.env.credential.sample`` til ``.env.credential``.  
