@@ -18,8 +18,17 @@ Blokkeringslistene har to hovedbruksområder:
 - [Fortigate](https://github.com/helsecert/blocklist/blob/master/Fortigate%20brannmur)
 
 ## M365-phishing
-- For dere som vil sette det opp for [en M365-tenant](https://github.com/helsecert/blocklist/tree/master/m365-single-tenant). (Kan selvsagt gjøres for hver enkelt tenant man har)
-- For dere som vil sette det opp for flere [M365-tenants og har Sentinel-lisens](kommer...).
+
+- For dere som vil sette det opp for en M365-tenant har vi fått inn flere måter i gjøre dette på.
+  - Mappen [m365-single-tenant](https://github.com/helsecert/blocklist/tree/master/m365-single-tenant) inneholder skript for å
+    - oppdatere blokkeringsliste
+    - søke 30 dager tilbake i tid for å se om angriper har logget inn fra en kjent angreps-IP.
+  - Mappen [snippets](https://github.com/helsecert/blocklist/tree/master/snippets) inneholder dedikerte skripts for å:
+    - laste ned og lagre blockliste-data.
+    - oppdatere blokkeringsliter i M365 basert på nedlasted data.
+    - Laste og oppdatere i ett (om dette gjøres fra samme maskin).
+    - dedikerte skript for å håndtere feilsituasjoner.
+- For dere som vil sette det opp for flere [M365-tenants og har Sentinel-lisens] jobber vi med å få ut en guide.
 
 ## Hvor har dere guide for \<mitt produkt\>
 
