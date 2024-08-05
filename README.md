@@ -25,7 +25,7 @@ Blokkeringslistene har to hovedbruksområder:
     - søke 30 dager tilbake i tid for å se om angriper har logget inn fra en kjent angreps-IP.
   - Mappen [snippets](https://github.com/helsecert/blocklist/tree/master/snippets) inneholder dedikerte skripts for å:
     - laste ned og lagre blockliste-data.
-    - oppdatere blokkeringsliter i M365 basert på nedlasted data.
+    - oppdatere blokkeringslister i M365 basert på nedlasted data.
     - Laste og oppdatere i ett (om dette gjøres fra samme maskin).
     - dedikerte skript for å håndtere feilsituasjoner.
 - For dere som vil sette det opp for flere [M365-tenants og har Sentinel-lisens] jobber vi med å få ut en guide.
