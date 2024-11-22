@@ -8,16 +8,16 @@ Skriptene har ett konfigurasjons design der man putter statisk konfigurasjon i `
 Hvert skript har sin egen README, men her er overordnet beskrivelse av skriptene.
 
 ## BlockListDownload
-Dette skriptet er ment for å bare laste ned HelseCERT sine blocklister i CSV format.  
-Skriptet henter full liste med kontekst infomrasjon, og enkle lister i CDIR og regex format.  
+Dette skriptet er ment for å bare laste ned HelseCERT sine blokkeringslister i ulike format.  
+Skriptet henter full liste med kontekstinformasjon, og enkle lister i CIDR og regex-format.  
 Dette kan være nyttig om man henter ned listene på en sentral server og andre løsninger kan da bruke disse listene videre.
 
 ## UpdateConditonalAccessDirect
-Dette skriptet henter blocklist data og oppdaterer direkte en location liste i Microsoft Entra Conditonal Access.  
-Ingen mellomlagring og oppdaterer direkte basert på cdir listen fra HelseCERT.
+Dette skriptet henter blocklist-data og oppdaterer direkte en location liste i Microsoft Entra Conditonal Access.  
+Ingen mellomlagring og oppdaterer direkte basert på CIDR-listen fra HelseCERT.
 
 ## UpdateConditonalAccessIndirect
-Dette skriptet oppdaterer location listen i Microsoft Entra Conditonal Acccess basert på cdir listen som er hentet ned via ``BlockListDownload``.  
+Dette skriptet oppdaterer location listen i Microsoft Entra Conditonal Acccess basert på CIDR listen som er hentet ned via ``BlockListDownload``.  
 Kan være nyttig hvis man må splitte oppgavene på hvilken server som henter listen og hvem som har rettighet til å endre på Conditonal Access.  
 
 ## ErrorHandler

@@ -1,11 +1,11 @@
 # UpdateConditonalAccessDirect
-Dette skriptet oppdatere en IP Named Location i Microsoft Entra Conditonal access.  
-Skriptet oppdatere direkte basert på CDIR listen som kommer fra HelseCERT blocklist.  
+Dette skriptet oppdaterer en IP Named Location i Microsoft Entra Conditonal access.  
+Skriptet oppdaterer direkte basert på CIDR listen som kommer fra HelseCERT blocklist.  
 
 ## Komme i gang
 Kopier ``.env.sample`` til ``.env`` og ``.env.credential.sample`` til ``.env.credential``.  
 Deretter redigere instillingene som nødvendig.  
-Legg inn addressen til HelseCERT listen i ``.env`` (Obs! Bruk full URL her ikke bare serveraddressen, per i dag så slutter den fulle addressen på ``/v2``).  
+Legg inn addressen til HelseCERT listen i ``.env`` (Obs! Bruk full URL her ikke bare serveraddressen, per i dag så slutter den fulle addressen på ``/v3``).  
 Legg til referanser til riktig tenant ID og hvilen AppRegistration som skal brukes til å oppdatere listen Conditonal access.
 Man må også legge til ID-en til Location listen som skal oppdaters, skriptet vill ikke opprette denne selv.  
 ID-en kan hentes på forksjellige måter, men enkleste er enten å liste ut via ``Get-MgIdentityConditionalAccessNamedLocation`` eller via Graph Explorer og ``GET https://graph.microsoft.com/v1.0/identity/conditionalAccess/namedLocations``

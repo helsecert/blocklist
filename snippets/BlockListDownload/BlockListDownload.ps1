@@ -40,12 +40,9 @@ function GetEnvData {
 # Call our Env Data function
 GetEnvData
 
-# Create a credential object we can use to authenticate the web connecton with
-$Credential = ([System.Management.Automation.PSCredential]::New($CredentialData.blocklistuser, (ConvertTo-SecureString $CredentialData.blocklistpass -AsPlainText -Force)))
-
-# Try connecting to make sure we can get lists at all so we dont try to do unnesscary work
+# Try connecting to make sure we can get lists at all so we dont try to do unnessesary work
 try {
-    $Response = Invoke-WebRequest -Uri "$($EnvData.blocklistdomain)/help" -UseBasicParsing -Credential $Credential -ErrorAction Stop
+    $Response = Invoke-WebRequest -Uri "$($EnvData.blocklistdomain)/v3?apikey=" + $EnvData.blocklistapikey + "&format=list&type=ipv4" -ErrorAction Stop
 }
 catch {
     $er = $error[0]
@@ -155,6 +152,6 @@ function Get-Blocklist {
 }
 
 # These are the list we get by default
-Get-Blocklist -ListQuery "f=list_context" -TargetFile (Join-Path $TargetDirectory "List.csv") -BlockListCredential $Credential
-Get-Blocklist -ListQuery "f=list_cidr" -TargetFile (Join-Path $TargetDirectory "cdirList.csv") -BlockListCredential $Credential
-Get-Blocklist -ListQuery "f=list_regex" -TargetFile (Join-Path $TargetDirectory "regexList.csv") -BlockListCredential $Credential
+Get-Blocklist -ListQuery "format=list_context" -TargetFile (Join-Path $TargetDirectory "List.csv") -BlockListCredential $Credential
+Get-Blocklist -ListQuery "format=list_cidr" -TargetFile (Join-Path $TargetDirectory "cdirList.csv") -BlockListCredential $Credential
+Get-Blocklist -ListQuery "format=list_regex" -TargetFile (Join-Path $TargetDirectory "regexList.csv") -BlockListCredential $Credential

@@ -45,11 +45,9 @@ function GetEnvData {
 # Call our Env Data function
 GetEnvData
 
-
-$Credential = ([System.Management.Automation.PSCredential]::New($CredentialData.blocklistuser, (ConvertTo-SecureString $CredentialData.blocklistpass -AsPlainText -Force)))
 # Try connecting to make sure we can get lists at all
 try {
-    $Response = Invoke-WebRequest -Uri "$($EnvData.blocklisturi)/help" -UseBasicParsing -Credential $Credential -ErrorAction Stop
+    $Response = Invoke-WebRequest -Uri "$($EnvData.blocklisturi)/v3?apikey=" + $EnvData.blocklistapikey + "&format=list&type=ipv4" -ErrorAction Stop
 }
 catch {
     $er = $error[0]
@@ -62,7 +60,7 @@ catch {
 
 # Get the CDIR formatted blocklist
 try {
-    $Response = Invoke-WebRequest -Uri "$($EnvData.blocklisturi)?f=list_cidr" -UseBasicParsing -Credential $Credential -ErrorAction Stop
+    $Response = Invoke-WebRequest -Uri "$($EnvData.blocklisturi)/v3 ?format=list_cidr&type=ipv4&type=ipv4cidr" -ErrorAction Stop
 }
 catch {
     $er = $error[0]

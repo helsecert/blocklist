@@ -1,4 +1,4 @@
-Oppskrift på hvordan man kan hente ned og blokkere IOC'er fra blokklist i Fortigate brannmurer.
+## Oppskrift på hvordan man kan hente ned og blokkere IOC'er fra blokklist i Fortigate brannmurer.
 
 Fortigate kan importere eksterne threat feeds for blokkering av IP-addresser, dette gjøres via fanen Security Fabric --> External Connectors.
 
