@@ -88,7 +88,6 @@ Get-Content $configfil | ForEach-Object {
       if ($key -eq '$TenantId') { $TenantId=$val } 
       elseif ($key -eq '$AppId') { $AppId=$val } 
       elseif ($key -eq '$CertificateThumbprint') { $CertificateThumbprint=$val } 
-      elseif ($key -eq '$NBPuser') { $NBPuser=$val }
       elseif ($key -eq '$NBPpass') { $NBPpass=$val } 
       elseif ($key -eq '$smtpserver') { $smtpserver=$val }
       elseif ($key -eq '$smtpto') { $smtpto=$val }
@@ -101,7 +100,6 @@ Get-Content $configfil | ForEach-Object {
 
 # Sjekker om variabler er endret før kjøring
 
-if($NBPuser -eq 'Virksomhet') {write-error 'Variabel $NBPuser ikke endret fra defaultverdi. Gjør dette før kjøring'; Exit}
 if($NBPpass -eq 'DittNbpBlocklistPassord') {write-error 'Variabel $NBPpass ikke endret fra defaultverdi. Gjør dette før kjøring'; Exit}
 if($smtpserver -eq "X.X.X.X") {write-error 'Variabel $smtpserver ikke endret fra defaultverdi. Gjør dette før kjøring'; Exit}
 foreach($smtptoemail in $smtpto){if($smtptoemail.contains("virksomhet.local")) {write-error 'Variabel $NBPsmtptouser ikke endret fra defaultverdi. Gjør dette før kjøring'; Exit}}
@@ -113,7 +111,7 @@ if($CertificateThumbprint -eq "AA123456ABC12345ABC41B4F20E4B2D1") {write-error '
 if($blocklistdomain -eq "blocklistdomain.local") {write-error 'Variabel $blocklistdomain ikke endret fra defaultverdi. Gjør dette før kjøring'; Exit}
 
 # Sett parameter for nedlasting av blocklist fra Helse og KommuneCERT
-$url = "https://$blocklistdomain/blocklist/v2?f=list&t=ipv4&category=phishing"
+$url = "https://$blocklistdomain/v3?apikey=" + $NBPpass + "format=list&type=ipv4&category=phishing"
 
 # Sjekker om filene NamedLocations og Signinslog finnes fra før, vis ikkje opprette den
 if(!(Test-Path $NamedLocations)) {New-Item -Path $NamedLocations -ItemType File -Force}

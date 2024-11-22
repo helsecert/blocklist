@@ -58,8 +58,7 @@ if ($transcript -eq $true) {
  
 #region VARIABLES ########################################################### - VARIABLES
 # Login info to HelseCERT NBP URL
-$NBPuser = "<NBP_Brukernavn>" # Username for NBP List access
-$NBPpass = "<NBP_Passord>" # Password for NBP List access
+$blocklistapikey = "<NBP_API_Key>" # Password for NBP List access
 
 # HelseCERT NBP Domain
 $blocklistdomain = "<NBP_Domain>" # Domain for NBP List access
@@ -100,7 +99,7 @@ function Get-CsvFromHelseCERT {
     }
  
     # Set Parameters for blocklist download from HelseCert
-    $url = "https://" + $blocklistdomain + "/blocklist/v2?f=list&t=ipv4&category=phishing"
+    $url = "https://" + $blocklistdomain + "/v3?apikey=" + $blocklistapikey + "&f=list&t=ipv4&category=phishing"
     $secpasswd = ConvertTo-SecureString $NBPpass -AsPlainText -Force
     $credential = New-Object System.Management.Automation.PSCredential ($NBPuser, $secpasswd)
  
