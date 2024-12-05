@@ -60,7 +60,7 @@ catch {
 
 # Get the CDIR formatted blocklist
 try {
-    $Response = Invoke-WebRequest -Uri "$($EnvData.blocklisturi)/v3 ?format=list_cidr&type=ipv4&type=ipv4cidr" -ErrorAction Stop
+    $Response = Invoke-WebRequest -Uri "$($EnvData.blocklisturi)/v3?format=list_cidr&type=ipv4&type=ipv4cidr" -ErrorAction Stop
 }
 catch {
     $er = $error[0]
