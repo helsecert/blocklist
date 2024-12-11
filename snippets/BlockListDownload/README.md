@@ -8,7 +8,7 @@ Til standard laster dette skriptet ned følgende listetyper:
 ## Komme i gang
 Kopier ``.env.sample`` til ``.env`` og ``.env.credential.sample`` til ``.env.credential``.  
 Deretter redigere instillingene som nødvendig.  
-Legg inn addressen til HelseCERT listen i ``.env`` (Obs! Bruk full URL her ikke bare serveraddressen, per i dag så slutter den fulle addressen på ``/v2``) og endre stien som filer skal lastes ned til om nødvendig.  
+Legg inn addressen til HelseCERT listen i ``.env`` (Obs! Bruk full URL her ikke bare serveraddressen, per i dag så slutter den fulle addressen på ``/v3``) og endre stien som filer skal lastes ned til om nødvendig.  
 Legg til riktig brukernavn og passord i ``.env.credential``.
 Når dette er på plass så kan man kjøre skriptet.
 

@@ -1,6 +1,6 @@
 # UpdateConditonalAccessIndirect
-Dette skriptet oppdatere en IP Named Location i Microsoft Entra Conditonal access.  
-Skriptet oppdatere basert på CDIR listen som kommer fra HelseCERT blocklist og som er lasted ned via "HelseCertBlocklist" skriptet.
+Dette skriptet oppdaterer en IP Named Location i Microsoft Entra Conditonal access.  
+Skriptet oppdatere basert på CIDR-listen som kommer fra HelseCERT blocklist og som er lasted ned via "HelseCertBlocklist" skriptet.
 
 ## Komme i gang
 Kopier ``.env.sample`` til ``.env`` og ``.env.credential.sample`` til ``.env.credential``.  
