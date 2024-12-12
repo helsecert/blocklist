@@ -111,7 +111,7 @@ if($CertificateThumbprint -eq "AA123456ABC12345ABC41B4F20E4B2D1") {write-error '
 if($blocklistdomain -eq "blocklistdomain.local") {write-error 'Variabel $blocklistdomain ikke endret fra defaultverdi. Gjør dette før kjøring'; Exit}
 
 # Sett parameter for nedlasting av blocklist fra Helse og KommuneCERT
-$url = "https://$blocklistdomain/v3?apikey=" + $NBPpass + "format=list&type=ipv4&type=ipv6&list_name=auth"
+$url = "https://$blocklistdomain/v3?apikey=" + $NBPpass + "&format=list&type=ipv4&type=ipv6&list_name=auth"
 
 # Sjekker om filene NamedLocations og Signinslog finnes fra før, vis ikkje opprette den
 if(!(Test-Path $NamedLocations)) {New-Item -Path $NamedLocations -ItemType File -Force}

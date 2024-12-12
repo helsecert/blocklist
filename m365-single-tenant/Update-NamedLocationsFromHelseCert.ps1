@@ -116,7 +116,7 @@ if($blocklistdomain -eq "blocklistdomain.local") {write-error 'Variabel $blockli
 if($NamedLocationId -eq "1234abcd-1234-abcd-1324-abcdf12345") {write-error 'Variabel $blocklistdomain ikke endret fra defaultverdi. Gjør dette før kjøring'; Exit}
 
 # Sett parameter for nedlasting av blocklist fra Helse og KommuneCERT
-$blocklisturl = "https://$blocklistdomain/v3?apikey="+ $NBPpass +"format=list_cidr&type=ipv4&type=ipv4cidr&type=ipv6&ipv6cidr&list_name=auth"
+$blocklisturl = "https://$blocklistdomain/v3?apikey="+ $NBPpass +"&format=list_cidr&type=ipv4&type=ipv4cidr&type=ipv6&ipv6cidr&list_name=auth"
 
 # Sjekker om fila NamedLocations finnes fra før, vis ikkje opprette den
 if(!(Test-Path $NamedLocations)) {New-Item -Path $NamedLocations -ItemType File -Force}
