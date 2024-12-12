@@ -99,7 +99,7 @@ function Get-CsvFromHelseCERT {
     }
  
     # Set Parameters for blocklist download from HelseCert
-    $url = "https://" + $blocklistdomain + "/v3?apikey=" + $blocklistapikey + "&format=list&type=ipv4&type=ipv6&list_name=bl_auth"
+    $url = "https://" + $blocklistdomain + "/v3?apikey=" + $blocklistapikey + "&format=list&type=ipv4&type=ipv6&list_name=auth"
     $secpasswd = ConvertTo-SecureString $NBPpass -AsPlainText -Force
     $credential = New-Object System.Management.Automation.PSCredential ($NBPuser, $secpasswd)
  
