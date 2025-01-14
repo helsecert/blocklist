@@ -7,7 +7,7 @@ Create new --> IP Address
 Status: Enabled.
 Name: settes til noe lett gjenkjennelig.
 Update method: Extarnal Feed.
-URL of external resources: her brukes IP-cidr filter fra link: https://blocklist.helsecert.no/v3?apikey=<api-nøkkel mottatt på mail>&format=list_cidr&type=ipv4&type=ipv4cidr
+URL of external resources: her brukes IP-cidr filter fra link: https://blocklist.helsecert.no/v3?apikey=<api-nøkkel mottatt på mail>&format=list_cidr&type=ipv4&type=ipv4_cidr
 Refresh rate: 5
 
 Så er det og sette en deny policy for addressene det gjelder som blokkerer både utgående og inkommende trafikk fra disse.
