@@ -19,7 +19,7 @@
     Brukeren som kjører scriptet må ha skrivetilganger til dei tre lokale filene
 
 .NOTES
-    Version:        0.5
+    Version:        0.6
     Author:         SysIKT KO
     Updated date:  2024-03-11
 
