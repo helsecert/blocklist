@@ -8,7 +8,7 @@
     Will download file and check if the existing downloaded version matches previous version or not. if it doesnt match, it will upload to Azure Sentinel Watchlist.
  
 .NOTES
-    Version:       1.2
+    Version:       1.3
     Author:        NHNSOC
     Updated date:  2024-02-26
  
