@@ -16,7 +16,7 @@
     Scriptet anbefales kjørt en gang i timen.
 
 .NOTES
-    Version:        0.4
+    Version:        0.5
     Author:         SysIKT KO
     Updated date:  2024-03-11
 
