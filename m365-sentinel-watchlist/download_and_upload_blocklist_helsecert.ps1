@@ -8,7 +8,7 @@
     Will download file and check if the existing downloaded version matches previous version or not. if it doesnt match, it will upload to Azure Sentinel Watchlist.
  
 .NOTES
-    Version:       1.4
+    Version:       1.5
     Author:        NHNSOC
     Updated date:  2024-02-26
  
@@ -80,8 +80,8 @@ $servicePrincipalAppId = "<App Registration Client ID>" # Your App Registration 
 $ServicePrincipalSecret = ConvertTo-SecureString "<App Registration Secret>" -AsPlainText -Force # App registration Secret
  
 # Watchlist information
-$watchlistAlias = "HelseCERT_Blocklist_IPv4" # Watchlist ALIAS
-$CsvHeader = "ipv4" # Header that is added to the list, will also be search key item
+$watchlistAlias = "HelseCERT_Blocklist_IP" # Watchlist ALIAS
+$CsvHeader = "ip" # Header that is added to the list, will also be search key item
 $WatchlistDescription = "HelseCERT IP watchlist" # Watchlist Description
 #endregion /VARIABLES ####################################################### - /VARIABLES
  
@@ -99,7 +99,7 @@ function Get-CsvFromHelseCERT {
     }
  
     # Set Parameters for blocklist download from HelseCert
-    $url = "https://" + $blocklistdomain + "/v3?apikey=" + $blocklistapikey + "&format=list&type=ipv4&type=ipv6&list_name=auth&list_name=default"
+    $url = "https://" + $blocklistdomain + "/v3?apikey=" + $blocklistapikey + "&format=list&type=ipv4&type=ipv6&type=ipv4_cidr&type=ipv6_cidr&list_name=auth&list_name=default"
     $secpasswd = ConvertTo-SecureString $NBPpass -AsPlainText -Force
     $credential = New-Object System.Management.Automation.PSCredential ($NBPuser, $secpasswd)
  
