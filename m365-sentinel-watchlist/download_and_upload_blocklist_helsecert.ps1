@@ -8,7 +8,7 @@
     Will download file and check if the existing downloaded version matches previous version or not. if it doesnt match, it will upload to Azure Sentinel Watchlist.
  
 .NOTES
-    Version:       1.3
+    Version:       1.4
     Author:        NHNSOC
     Updated date:  2024-02-26
  
@@ -99,7 +99,7 @@ function Get-CsvFromHelseCERT {
     }
  
     # Set Parameters for blocklist download from HelseCert
-    $url = "https://" + $blocklistdomain + "/v3?apikey=" + $blocklistapikey + "&format=list&type=ipv4&type=ipv6&list_name=auth"
+    $url = "https://" + $blocklistdomain + "/v3?apikey=" + $blocklistapikey + "&format=list&type=ipv4&type=ipv6&list_name=auth&list_name=default"
     $secpasswd = ConvertTo-SecureString $NBPpass -AsPlainText -Force
     $credential = New-Object System.Management.Automation.PSCredential ($NBPuser, $secpasswd)
  
