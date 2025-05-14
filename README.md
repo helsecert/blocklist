@@ -11,24 +11,31 @@ Skriptene er i hovedsak laget av våre medlemmer og brukt i produksjonssystemer 
 Når man ber om tilgang til blokkeringslistene får man en intro-e-post med infor for å komme i gang. Blokkeringslistene har også et api hvor man kan spesifisere hva man vil hente ned.
 
 Blokkeringslistene har to hovedbruksområder: 
-- Blokkering av IP / domener i brannmur
+- Blokkering av IP / domener i brannmur/proxy/endepunkt
 - Blokkinger og søk etter phishing-IPer i M365
 
-## Brannmurguide
-- [Fortigate](https://github.com/helsecert/blocklist/blob/master/Fortigate%20brannmur)
+## Brannmur
+- [Fortigate](https://github.com/helsecert/blocklist/blob/master/FortigateBrannmur.md)
 
-## M365-phishing
+## Endepunkt
+### Defender for Endpoint
+- [Defender for Endpoint](https://github.com/helsecert/blocklist/blob/master/m365-single-tenant/Add-MSDefIOCFromHSBlocklist.ps1)
+  - NB! Fordi dette scriptet gjenbruker config fra m365-single-tenant scriptet nevnt under, ligger dette under [m365-single-tenant](https://github.com/helsecert/blocklist/tree/master/m365-single-tenant)
+
+## M365-phishing / Entra ID
 
 - For dere som vil sette det opp for en M365-tenant har vi fått inn flere måter i gjøre dette på.
   - Mappen [m365-single-tenant](https://github.com/helsecert/blocklist/tree/master/m365-single-tenant) inneholder skript for å
     - oppdatere blokkeringsliste
-    - søke 30 dager tilbake i tid for å se om angriper har logget inn fra en kjent angreps-IP.
+    - søke 30 dager tilbake i tid for å se om angriper har logget inn fra en kjent angreps-IP
+    - Kim André Vaksdal har laget en god [guide](https://prottecio.com/2025/05/13/2025-automating-updated-named-locations-like-a-boss/) for dette
   - Mappen [snippets](https://github.com/helsecert/blocklist/tree/master/snippets) inneholder dedikerte skripts for å:
-    - laste ned og lagre blockliste-data.
-    - oppdatere blokkeringslister i M365 basert på nedlasted data.
-    - Laste og oppdatere i ett (om dette gjøres fra samme maskin).
-    - dedikerte skript for å håndtere feilsituasjoner.
-- For dere som vil sette det opp for flere [M365-tenants og har Sentinel-lisens] jobber vi med å få ut en guide.
+    - laste ned og lagre blockliste-data
+    - oppdatere blokkeringslister i M365 basert på nedlasted data
+    - Laste og oppdatere i ett (om dette gjøres fra samme maskin)
+    - dedikerte skript for å håndtere feilsituasjoner
+  -  Mappen [m365-sentinel-watchlist](https://github.com/helsecert/blocklist/tree/master/m365-sentinel-watchlist) inneholder script for å oppdatere watchlist i Sentinel
+
 
 ## Hvor har dere guide for \<mitt produkt\>
 
@@ -49,7 +56,7 @@ For tilgang til blokkeringslistene må:
   * Se https://helsecert.no -> bli medlem
 * Dere har aktivert tjenesten "blokkeringslister". 
   * For å aktivere:  Send e-post til post@helsecert.no med:
-    * IP-adresse(r) evt IP-nett som skal teste og bruke blokkeringslister - (kan hentes ned via både internett og helsenett).
+    * IP-adresse(r) evt IP-nett som skal teste og bruke blokkeringslister - (kan hentes ned via internett).
     * Kontaktperson hos dere. E-post og telefonnummer
  
-IP-adresse dere kommer fra kan finnes ved å kjøre `curl https://api.ipify.org` i kommandolinje eller fra browser. (For internett)
+IP-adresse dere kommer fra kan finnes ved å kjøre `curl https://api.ipify.org` i kommandolinje eller fra browser.
