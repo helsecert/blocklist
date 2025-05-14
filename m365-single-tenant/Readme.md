@@ -7,11 +7,11 @@ En rekke adresser vi har i blokkeringslistene vil forsøkes brukt til innlogging
 
 ## Innhold
 
-I denne mappen ligger 3 scripts:
+I denne mappen ligger 3 skripts:
  - [Update-NamedLocationsFromHelseCert.ps1](https://github.com/helsecert/blocklist/blob/master/m365-single-tenant/Update-NamedLocationsFromHelseCert.ps1): Sørger for å oppdatere Conditional Access slik innloggingsforsøk fra IP-adressene vi kjenner til blir blokkert
    - Se https://prottecio.com/2025/05/13/2025-automating-updated-named-locations-like-a-boss/ skrevet av Kim André Vaksdal for en detaljert guide 
  - [Get-SigninsFromHelseCertBlocklistIPs.ps1](https://github.com/helsecert/blocklist/blob/master/m365-single-tenant/Get-SigninsFromHelseCertBlocklistIPs.ps1): Sørger for å søke gjennom Sign-In logs og matche disse mot blokkeringslistene våre, og varsle ved treff
- - [Add-MSDefIOCFromHSBlocklist.ps1](https://github.com/helsecert/blocklist/blob/master/m365-single-tenant/Get-SigninsFromHelseCertBlocklistIPs.ps1): Script for å laste ned blockliste fra HelseCERT og legge inn indicators i Microsoft Defender for Endpoint via API
+ - [Add-MSDefIOCFromHSBlocklist.ps1](https://github.com/helsecert/blocklist/blob/master/m365-single-tenant/Get-SigninsFromHelseCertBlocklistIPs.ps1): Skript for å laste ned blockliste fra HelseCERT og legge inn indicators i Microsoft Defender for Endpoint via API
 
 ## Komme i gang
 Man trenger:
