@@ -30,7 +30,7 @@
     $tenantId = '12345678-abcd-1234-abcd-0123456789abcd'
     $appId = '12345678-1234-abcd-1234-0123456789abcd'
     $appSecret = '-AA123456ABC12345ABC41B4F20E4B2D1'
-    $expirationTime = 15
+    $expirationDate = 15
     $action = 'Block'
     $smtpserver = 'X.X.X.X'
     $smtpto = helpdesk@virksomhet.lokal, admin@virksomhet.lokal
