@@ -559,6 +559,8 @@ Eksempel:
 
 ## Avslutningsvis
 
+Hvis du ønsker å inkludere andre lister dupliserer du ønsket Threat Feed-oppskrift ovenfor og legger på eksempelvis `&list=auth` i Url
+
 Enterprise Security støtter også Threat Matching på *Sertifikater*, *User Agents*, *Prosess* osv som beskrevet [her](https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.0/threat-intelligence/supported-types-of-threat-intelligence-in-splunk-enterprise-security)
 
 For å gjøre automatisk retrospektiv matching finnes det en Splunk app for dette også. Kontakt [mbjerkel@cisco.com](mailto:email@domain.com) for å få tilgang på denne.
