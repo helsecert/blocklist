@@ -12,10 +12,10 @@ Automatisk Threat Matching skjer på nye data som går inn i Splunk, og krever a
 Vi følger [dokumentasjonen](https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.0/threat-intelligence/add-new-threat-intelligence-sources-in-splunk-enterprise-security) til punkt og prikke:
 
 Naviger til *Enterprise Security-appen*, trykk *Configure* -> *Threat Intelligence* -> *Threat Intelligence Sources* -> *New* -> *Line Oriented*
-<img width="1689" alt="image" src="https://github.com/user-attachments/assets/49f615a3-4aaf-482a-973b-168dc72ace13" />
+<img width="1689" alt="image" src="/splunk-enterprise-security/1.png" />
 
 Eksempel:  
-<img width="675" alt="image" src="https://github.com/user-attachments/assets/a4145d70-a46c-4032-92da-4a846cf40642" />
+<img width="675" alt="image" src="/splunk-enterprise-security/2.png" />
 
 *Name*, *Description*, *Interval*, *Max age* og *Max size* er veiledende og kan endres ved behov.
 
