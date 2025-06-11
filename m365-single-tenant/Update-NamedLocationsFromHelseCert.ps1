@@ -145,6 +145,9 @@ if ((Test-Path $NamedLocations) -and (Get-Content $NamedLocations | Measure-Obje
     # Importer csv fil
     $Locations = Import-Csv -Path $NamedLocations -Delimiter "`t" -Header "cidrAddress"
 
+    # Fjerner duplikater
+    $Locations = $Locations | Group-Object -Property cidrAddress | ForEach-Object { $_.Group[0] }
+
     # Bygge opp body
     $params = @{
 	"@odata.type" = "#microsoft.graph.ipNamedLocation"
@@ -154,14 +157,21 @@ if ((Test-Path $NamedLocations) -and (Get-Content $NamedLocations | Measure-Obje
 	
     $params.Add("IpRanges",@())
     # Loop gjennom alle ipane i csv filen
-
-    foreach($Location in $Locations){
-            write-host "Legger til:" $Location.cidrAddress -ForegroundColor Yellow
-            $IpRanges=@{}
-            $IpRanges.add("@odata.type" , "#microsoft.graph.iPv4CidrRange")
-            $IpRanges.add("CidrAddress" , $Location.cidrAddress)
-            $params.IpRanges+=$IpRanges
+    foreach ($Location in $Locations) {
+        $IpRanges = @{}
+        if ($Location.cidrAddress -match ":") {
+            write-host "Legger til IPv6:" $Location.cidrAddress -ForegroundColor Yellow
+            # Finner IPv6 (inneholder kolon)
+            $IpRanges.add("@odata.type", "#microsoft.graph.iPv6CidrRange")
+        }
+        else {
+            write-host "Legger til IPv4:" $Location.cidrAddress -ForegroundColor Yellow
+            $IpRanges.add("@odata.type", "#microsoft.graph.iPv4CidrRange")
+        }
+        $IpRanges.add("CidrAddress", $Location.cidrAddress)
+        $params.IpRanges += $IpRanges
     }
+    
     $params | ConvertTo-Json -Depth 4 
     
     # Oppdater Named Location
