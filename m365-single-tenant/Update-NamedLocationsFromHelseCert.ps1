@@ -16,9 +16,9 @@
     Scriptet anbefales kjørt en gang i timen.
 
 .NOTES
-    Version:        0.5
+    Version:        0.6
     Author:         SysIKT KO
-    Updated date:  2024-03-11
+    Updated date:  2025-11-06
 
     Takk til Alexander Filipin for utgangspunktet til scriptet:
     https://github.com/AlexFilipin/ConditionalAccess/blob/master/Deploy-NamedLocations.ps1
