@@ -17,7 +17,7 @@
 
 .NOTES
     Version:        0.6
-    Author:         SysIKT KO
+    Author:         Sopra Steria, SysIKT KO
     Updated date:  2025-11-06
 
     Takk til Alexander Filipin for utgangspunktet til scriptet:
