@@ -80,12 +80,14 @@ if($AppId -eq "12345678-1234-abcd-1234-0123456789abcd") {write-error 'Variabel $
 if($appSecret -eq "-AA123456ABC12345ABC41B4F20E4B2D1") {write-error 'Variabel $CertificateThumbprint ikke endret fra defaultverdi. Gjør dette før kjøring'; Exit}
 if($blocklistdomain -eq "blocklistdomain.local") {write-error 'Variabel $blocklistdomain ikke endret fra defaultverdi. Gjør dette før kjøring'; Exit}
 
+# NB! merk at både md5checksumurl og blocklisturl har limit=15000 fordi defender ikke støtter mer enn 15000. 
+# NB2! blocklisturl er p.t. kun satt for å håndtere Domain endepunktet. 
 # Sett variabel for md5sjekksum fil
-$md5checksumurl = "https://$blocklistdomain/v3?apikey="+ $blocklistkey +"&format=list&type=domain&type=ipv6&type=ipv4&list_name=default&hash=md5"
+$md5checksumurl = "https://$blocklistdomain/v3?apikey="+ $blocklistkey +"&format=list&type=domain&list_name=default&limit=15000&hash=md5"
 $md5checksumfile = Join-Path $PSScriptRoot md5.txt
 
 # Sett variabel for nedlasting av blocklist fra Helse og KommuneCERT
-$blocklisturl = "https://$blocklistdomain/v3?apikey="+ $blocklistkey +"&format=list&type=domain&type=ipv6&type=ipv4&list_name=default"
+$blocklisturl = "https://$blocklistdomain/v3?apikey="+ $blocklistkey +"&format=list&type=domain&list_name=default&limit=15000"
 
 $expirationTime = (Get-Date).AddDays($expirationDate).ToString("yyyy-MM-ddTHH:mm:ssZ")
 
