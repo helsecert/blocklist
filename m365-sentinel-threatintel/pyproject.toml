@@ -1,0 +1,13 @@
+[project]
+name = "sentinel-threatintel-hc-blocklist"
+version = "0.1.0"
+description = "Fetches indicators from Helse- og KommuneCERTs Blocklists and uploads them to Sentinel Threat Intelligence"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "azure-identity>=1.25.1",
+    "stix2>=3.0.1",
+]
+
+[project.scripts]
+hkc-blocklist-to-sentinel = "hkcblocklist2sentinel.main:main"
