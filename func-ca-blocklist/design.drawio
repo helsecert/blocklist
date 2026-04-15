@@ -1,0 +1,338 @@
+<mxfile host="65bd71144e">
+    <diagram id="lHySrJLDIcLgYzjUq9Rd" name="Page-1">
+        <mxGraphModel dx="4275" dy="2651" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1600" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="bg-onboarding" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="-20" width="740" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="title-onboarding" value="🚀 Onboarding" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1;fontColor=#495057;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="180" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13-start" value="Start.ps1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=13;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/general/Powershell.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="60" width="90" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="12-onboard" value="Onboard-FunctionApp.ps1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=13;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/general/Powershell.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="60" width="90" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="15-bicep-func" value="Bicep template" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#0d6efd;fillColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.template;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="30" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="16-bicep-infra" value="Bicep template" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#0d6efd;fillColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.template;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="170" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="2-subscription" value="Azure&lt;br&gt;subscription" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=default;image=img/lib/azure2/general/Subscriptions.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="100" width="100" height="162" as="geometry"/>
+                </mxCell>
+                <mxCell id="bg-resource-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1976d2;strokeWidth=3;dashed=0;shadow=0;arcSize=22;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="420" width="1670" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="title-resources" value="Ressursgruppe: rg-helsecert-blocklist-prod-nwe-001" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;fontColor=#1976d2;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="435" width="480" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bg-compute" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="500" width="500" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="title-compute" value="⚡ Compute" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=#495057;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="510" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31-func" value="func-helsecert-blocklist-prod-nwe-001" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/compute/Function_Apps.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="570" width="110" height="97" as="geometry"/>
+                </mxCell>
+                <mxCell id="79-plan" value="asp-helsecert-blocklist-prod-nwe-001" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/app_services/App_Service_Plans.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="870" y="586" width="54" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="43-script" value="run.ps1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/general/Powershell.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="570" width="70" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="bg-storage" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="1320" y="500" width="280" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="title-storage" value="💾 Lagring" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=#495057;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1405" y="510" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="34-storage" value="sthelsecertblocklistprod001" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/storage/Storage_Accounts.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1417.5" y="601" width="75" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bg-network" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="1630" y="455" width="660" height="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="title-network" value="🌐 Nettverk &amp; Sikkerhet" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=#495057;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1845" y="480" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="30-vnet" value="vnet-helsecert-blocklist-prod-nwe-001" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.virtual_network;pointerEvents=1;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1785" y="520" width="120" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="49-subnet-int" value="snet" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=13;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/networking/Subnet.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1670" y="634" width="110" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="50-subnet-pe" value="snet" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=13;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/networking/Subnet.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1900" y="634" width="110" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="56-nsg-int" value="NSG" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=13;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/networking/Network_Security_Groups.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1642.5" y="625" width="27.5" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="55-nsg-pe" value="NSG" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=13;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/networking/Network_Security_Groups.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="2010.0000000000002" y="625" width="27.5" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="97-dns" value="blocklist-az.helsecert.no" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=13;labelBackgroundColor=#f8f9fa;image=img/lib/mscae/DNS_Private_Zones.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="2135" y="520" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="67-pe" value="pe-helsecert-blocklist-prod-nwe-001" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=13;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/networking/Private_Endpoint.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="2120" y="720" width="110" height="101" as="geometry"/>
+                </mxCell>
+                <mxCell id="bg-monitor" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="860" y="880" width="520" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="title-monitor" value="📊 Logger og appinfo" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=#495057;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="890" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41-log" value="log-helsecert-blocklist-prod-nwe-001" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/analytics/Log_Analytics_Workspaces.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="930" y="940" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="46-insights" value="appi-helsecert-blocklist-prod-nwe-001" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/devops/Application_Insights.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="939" width="70" height="99" as="geometry"/>
+                </mxCell>
+                <mxCell id="bg-identity" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="1440" y="880" width="720" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="title-identity" value="🔐 Identitet &amp; Graph API" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=#495057;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1790" y="890" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="85-mi" value="Managed Identity" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/identity/Entra_Managed_Identities.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1500" y="940" width="100" height="89" as="geometry"/>
+                </mxCell>
+                <mxCell id="103-graph" value="Microsoft Graph" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=#f8f9fa;image=img/lib/azure2/other/Entra_Identity.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1700" y="940" width="100" height="89" as="geometry"/>
+                </mxCell>
+                <mxCell id="104-named" value="Named Locations" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=#f8f9fa;image=img/lib/mscae/Security_Center.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1940" y="940" width="70" height="97" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-start-onboard" style="edgeStyle=none;html=1;strokeColor=#0d6efd;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="13-start" target="12-onboard" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-run-onboard" value="Kjører" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0d6efd;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="70" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-onboard-bicep1" style="edgeStyle=none;html=1;strokeColor=#0d6efd;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="12-onboard" target="15-bicep-func" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-deploy-func" value="Deployer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0d6efd;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="50" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-onboard-bicep2" style="edgeStyle=none;html=1;strokeColor=#0d6efd;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="12-onboard" target="16-bicep-infra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-bicep-sub" style="edgeStyle=none;html=1;strokeColor=#0d6efd;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="15-bicep-func" target="2-subscription" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-bicep-sub" value="Oppretter i" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0d6efd;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="110" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-bicep-rg" style="edgeStyle=none;html=1;strokeColor=#0d6efd;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="16-bicep-infra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-bicep-rg" value="Oppretter" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0d6efd;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="222" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-sub-rg" style="edgeStyle=none;html=1;strokeColor=#0d6efd;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="2-subscription" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-func-plan" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="31-func" target="79-plan" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1055" y="640"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-func-storage" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="31-func" target="34-storage" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1055" y="540"/>
+                            <mxPoint x="1445" y="540"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-func-storage" value="Lagrer script i" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#6c757d;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1320" y="543" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-func-script" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="31-func" target="43-script" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1245" y="618"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-func-script" value="Kjører" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#6c757d;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1150" y="626" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-func-subnet" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="31-func" target="49-subnet-int" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1100" y="780"/>
+                            <mxPoint x="1750" y="780"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-func-subnet" value="vnet integration" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#6c757d;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1630" y="755.5" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-func-mi" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;exitX=0.509;exitY=0.979;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="31-func" target="85-mi" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1100" y="665"/>
+                            <mxPoint x="1100" y="820"/>
+                            <mxPoint x="1550" y="820"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-func-mi" value="Run.ps1 bruker Managed Identity" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#6c757d;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1350" y="821" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-storage-script" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="34-storage" target="43-script" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1245" y="650"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-storage-script" value="Laster ned" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#6c757d;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1320" y="625" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-script-pe" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#2e7d32;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;dashed=1;" parent="1" source="43-script" target="67-pe" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1215" y="800"/>
+                            <mxPoint x="2175" y="800"/>
+                            <mxPoint x="2175" y="770"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-script-pe" value="Henter helsecert blocklist" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#2e7d32;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1645" y="805" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-vnet-dns" value="Registrerer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#6c757d;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1980" y="540" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-dns-pe" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;startArrow=classic;startFill=1;" parent="1" source="97-dns" target="67-pe" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2175" y="690"/>
+                            <mxPoint x="2175" y="690"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-subnet-pe" style="edgeStyle=none;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="50-subnet-pe" target="67-pe" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-subnet-pe" value="Koblet til" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#6c757d;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1970" y="770" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-insights-log" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="46-insights" target="41-log" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1195" y="1000"/>
+                            <mxPoint x="1020" y="1000"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="label-insights-log" value="Sender logs til" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#6c757d;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="960" width="110" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-mi-graph" style="edgeStyle=none;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="85-mi" target="103-graph" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-mi-graph" value="Autentiserer mot" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#6c757d;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1600" y="994" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-graph-named" style="edgeStyle=none;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="103-graph" target="104-named" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-graph-named" value="Oppdaterer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#6c757d;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1810" y="994" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-pe-pls" value="Privat forbindelse til helsecert" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#2e7d32;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1910" y="1285" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Deployer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0d6efd;fontStyle=1;fontSize=12;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="180" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=none;html=1;strokeColor=#0d6efd;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;entryX=0.142;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="16-bicep-infra" target="bg-resource-group" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="600" y="310" as="sourcePoint"/>
+                        <mxPoint x="930" y="381" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=none;html=1;strokeColor=#0d6efd;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;entryX=0.366;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2-subscription" target="bg-resource-group" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1180" y="326.5" as="sourcePoint"/>
+                        <mxPoint x="1650" y="337.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;exitX=1.025;exitY=0.606;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="30-vnet" target="97-dns" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1940" y="548" as="sourcePoint"/>
+                        <mxPoint x="2050" y="600" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="2030" y="560"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="30-vnet" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1790" y="667" as="sourcePoint"/>
+                        <mxPoint x="1720" y="630" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1760" y="553"/>
+                            <mxPoint x="1720" y="553"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;exitX=1.025;exitY=0.606;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="50-subnet-pe" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1908" y="560" as="sourcePoint"/>
+                        <mxPoint x="2135" y="560" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1955" y="560"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bg-nhn" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=3;dashed=0;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="1270" y="1240" width="520" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;strokeColor=#6c757d;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;entryX=0.571;entryY=0.01;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="46-insights" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1100" y="821" as="sourcePoint"/>
+                        <mxPoint x="1210" y="873" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1100" y="870"/>
+                            <mxPoint x="1220" y="870"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="title-nhn" value="🌍 Helse- og KommuneCERT (Eksternt)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1;fontColor=#2e7d32;fontFamily=Segoe UI;" parent="1" vertex="1">
+                    <mxGeometry x="1370" y="1255" width="340" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="126-pls" value="Private Link Service" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=14;labelBackgroundColor=#e8f5e9;image=img/lib/azure2/networking/Private_Link_Service.svg;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1660" y="1290" width="100" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="72-nhn" value="helsecert Blocklist API" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];labelBackgroundColor=#e8f5e9;shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=api;spacingTop=8;spacingBottom=8;" parent="1" vertex="1">
+                    <mxGeometry x="1280" y="1261.5" width="120" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-pls-nhn" style="edgeStyle=none;html=1;strokeColor=#2e7d32;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="126-pls" target="72-nhn" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-pe-pls" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#2e7d32;strokeWidth=2;endArrow=classic;endFill=1;rounded=0;" parent="1" source="67-pe" target="126-pls" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2270" y="771"/>
+                            <mxPoint x="2270" y="1319"/>
+                        </Array>
+                        <mxPoint x="1850" y="1310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
