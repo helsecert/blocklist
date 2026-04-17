@@ -1,4 +1,4 @@
-# Blocklist Function App-omboarding
+# Blocklist Function App-onboarding
 
 Dette repoet automatiserer utrulling av en Flex Consumption Azure Function App som synkroniserer HelseCert-blocklisten til Entra ID Conditional Access-navngitte lokasjoner hvert femte minutt. Skriptene installerer nødvendige verktøy, klargjør infrastrukturen og aktiverer funksjonen, slik at du kan onboarde et nytt miljø med én kommando. Merk: Scriptet skal bare kjøres én gang, forutsatt at onboarding fullføres. 
 
