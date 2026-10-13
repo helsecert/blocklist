@@ -5,7 +5,7 @@ if ($env:MSI_SECRET) {
     # Add to PSModulePath if not already present
     if ($env:PSModulePath -notlike "*$modulePath*") {
         $env:PSModulePath = "$modulePath;$env:PSModulePath"
-        Mew-Item -Path $modulePath -ItemType Directory
+        New-Item -Path $modulePath -ItemType Directory
         Write-Host "Creating directory: $modulePath"
     }
 
